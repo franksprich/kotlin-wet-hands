@@ -1,5 +1,7 @@
 package oop.sealedclass
 
+import java.lang.Exception
+
 
 sealed class Result(val message: String) {
 
@@ -8,7 +10,11 @@ sealed class Result(val message: String) {
     }
 
     class Success(message: String) : Result(message)
-    class Error(message: String) : Result(message)
     class Progress(message: String) : Result(message)
+    sealed class Error(message: String) : Result(message) {
+        class RecoverableError(exception: Exception, message: String) : Error(message)
+        class NonRecoverableError(exception: Exception, message: String) : Error(message)
+    }
+
 
 }

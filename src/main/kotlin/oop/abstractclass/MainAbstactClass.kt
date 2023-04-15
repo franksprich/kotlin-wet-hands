@@ -1,7 +1,7 @@
 package oop.abstractclass
 
- /**
- * {DESCRIPTION}
- * 
- * @author Frank Sprich
- */
+fun main(args: Array<String>) {
+    val vehicle = Car("BMW", "grey", 1, 4)
+    vehicle.move()
+    vehicle.stop()
+}

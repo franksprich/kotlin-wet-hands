@@ -1,8 +1,11 @@
 package oop.abstractclass
 
- /**
- * {DESCRIPTION}
- * 
- * @author Frank Sprich
- */class Vehicle {
+abstract class Vehicle {
+
+    abstract fun move()
+
+    fun stop() {
+        println("Stop from Vehicle")
+    }
+
 }

@@ -1,4 +1,4 @@
-package oop.dataclass.old
+package oop.dataclass.classic
 
 /**
  * {DESCRIPTION}
